@@ -1,0 +1,14 @@
+<div ng-controller="SortCtrl">
+    <style>
+        .data-item {
+            float: left;
+            width: 20px;
+            background-color: #c0c0c0;
+            border: 1px solid #080808;
+        }
+    </style>
+    <button ng-click="sort()">Sort</button>
+    <div>
+        <div ng-repeat="item in arr track by $index" class="data-item" ng-style="{'height': item*5+'px'}"></div>
+    </div>
+</div>

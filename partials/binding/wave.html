@@ -1,0 +1,15 @@
+<div ng-controller="WaveCtrl">
+    <style>
+        .wave-item {
+            float: left;
+            width: 1px;
+            background-color: #ffab51;
+        }
+    </style>
+    <div>
+        <div ng-repeat="item in staticItems track by $index" class="wave-item" ng-style="{'height': item+'px'}"></div>
+    </div>
+    <div style="clear: left">
+        <div ng-repeat="item in dynamicItems track by $index" class="wave-item" ng-style="{'height': item+'px'}"></div>
+    </div>
+</div>

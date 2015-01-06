@@ -1,0 +1,18 @@
+<div ng-controller="RegionCtrl">
+    <ul class="list-group col-md-4">
+        <li ng-repeat="province in provinceArr" ng-class="{true:'list-group-item active', false: 'list-group-item'}[province==selectedProvince]" ng-click="selectProvince(province)">
+            {{province}}
+        </li>
+    </ul>
+    <ul class="list-group col-md-4">
+        <li ng-repeat="city in cityArr" ng-class="{true:'list-group-item active', false: 'list-group-item'}[city==selectedCity]" ng-click="selectCity(city)">
+            {{city}}
+        </li>
+    </ul>
+    <form class="col-md-4">
+        <div class="form-group">
+            <select class="form-control col-md-6" ng-model="selectedProvince" ng-options="province for province in provinceArr"></select>
+            <select class="form-control col-md-6" ng-model="selectedCity" ng-options="city for city in cityArr"></select>
+        </div>
+    </form>
+</div>

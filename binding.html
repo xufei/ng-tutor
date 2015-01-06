@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>angularjs binding</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/controls.js -->
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/javascript" src="js/binding/simple.js"></script>
+    <script type="text/javascript" src="js/binding/array.js"></script>
+    <script type="text/javascript" src="js/binding/wave.js"></script>
+    <script type="text/javascript" src="js/binding/list.js"></script>
+    <script type="text/javascript" src="js/binding/region.js"></script>
+    <script type="text/javascript" src="js/binding/employee.js"></script>
+    <script type="text/javascript" src="js/binding/sort.js"></script>
+    <!-- endbuild -->
+
+</head>
+<body ng-app="tutor">
+
+<div class="panel panel-default">
+    <div class="panel-heading">simple binding</div>
+    <div class="panel-body">
+        <div ng-include="'partials/binding/simple.html'"></div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">array</div>
+    <div class="panel-body">
+        <div ng-include="'partials/binding/array.html'"></div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">style</div>
+    <div class="panel-body">
+        <div ng-include="'partials/binding/style.html'"></div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">list</div>
+    <div class="panel-body">
+        <div ng-include="'partials/binding/list.html'"></div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">region</div>
+    <div class="panel-body">
+        <div ng-include="'partials/binding/region.html'"></div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">employee</div>
+    <div class="panel-body">
+        <div ng-include="'partials/binding/employee.html'"></div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">wave</div>
+    <div class="panel-body">
+        <div ng-include="'partials/binding/wave.html'"></div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">sort</div>
+    <div class="panel-body">
+        <div ng-include="'partials/binding/sort.html'"></div>
+    </div>
+</div>
+
+</body>
+</html>

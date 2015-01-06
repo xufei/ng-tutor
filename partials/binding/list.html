@@ -1,0 +1,5 @@
+<ul class="list-group" ng-controller="ListCtrl">
+    <li ng-repeat="item in items" ng-class="{true:'list-group-item active', false: 'list-group-item'}[item==selectedItem]" ng-click="select(item)">
+        {{item.title}}
+    </li>
+</ul>

@@ -1,0 +1,40 @@
+<div ng-controller="ArrayCtrl">
+    <button ng-click="add()">Add Item</button>
+    <ul>
+        <li ng-repeat="item in arr1">{{item}}</li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+        <li ng-repeat="item in arr2 track by $index">{{item}}</li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+        <li ng-repeat="childArr in arr3 track by $index">
+            {{$index}}
+            <ul>
+                <li ng-repeat="item in childArr track by $index">{{item}}</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr/>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="child in arr4">
+            <td>{{child.name}}</td>
+            <td>{{child.age}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
