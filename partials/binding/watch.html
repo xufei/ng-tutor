@@ -1,0 +1,11 @@
+<div ng-controller="WatchCtrl">
+    <span>{{a}}</span>
+    <button ng-click="changeA()">change a</button>
+    <hr/>
+
+    <button ng-click="addItem()">add item</button>
+    <button ng-click="changeArr()">change arr</button>
+    <ul>
+        <li ng-repeat="item in arr">{{item}}</li>
+    </ul>
+</div>
