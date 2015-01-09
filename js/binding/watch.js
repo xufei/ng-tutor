@@ -1,8 +1,10 @@
 angular.module("tutor").controller("WatchCtrl", ["$scope", function ($scope) {
+    $scope.log = "";
+
     $scope.a = 1;
 
     $scope.$watch("a", function(newValue) {
-        alert(newValue);
+        $scope.log += (newValue) + "\n";
     });
 
     $scope.changeA = function() {
@@ -12,7 +14,7 @@ angular.module("tutor").controller("WatchCtrl", ["$scope", function ($scope) {
     $scope.arr = [0];
 
     $scope.$watch("arr", function(newValue) {
-        alert("change:" + newValue.join(","));
+        $scope.log += ("change:" + newValue.join(",")) + "\n";
     });
 
     $scope.changeArr = function() {
@@ -20,7 +22,7 @@ angular.module("tutor").controller("WatchCtrl", ["$scope", function ($scope) {
     };
 
     $scope.$watch("arr", function(newValue) {
-        alert("deep:" + newValue.join(","));
+        $scope.log += ("deep:" + newValue.join(","))+ "\n";
     }, true);
 
     $scope.addItem = function() {

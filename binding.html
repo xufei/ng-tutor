@@ -21,70 +21,16 @@
     <!-- endbuild -->
 
 </head>
-<body ng-app="tutor">
+<body ng-app="tutor" ng-controller="NavCtrl">
 
-<div class="panel panel-default">
-    <div class="panel-heading">simple binding</div>
-    <div class="panel-body">
-        <div ng-include="'partials/binding/simple.html'"></div>
-    </div>
-</div>
+<ul class="nav nav-tabs">
+    <li ng-repeat="item in items" ng-click="change(item)"
+        ng-class="{true:'active', false: ''}[item==selectedItem]">
+        <a href="javascript:void(0)">{{item.title}}</a>
+    </li>
+</ul>
 
-<div class="panel panel-default">
-    <div class="panel-heading">array</div>
-    <div class="panel-body">
-        <div ng-include="'partials/binding/array.html'"></div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">watch</div>
-    <div class="panel-body">
-        <div ng-include="'partials/binding/watch.html'"></div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">style</div>
-    <div class="panel-body">
-        <div ng-include="'partials/binding/style.html'"></div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">list</div>
-    <div class="panel-body">
-        <div ng-include="'partials/binding/list.html'"></div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">region</div>
-    <div class="panel-body">
-        <div ng-include="'partials/binding/region.html'"></div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">employee</div>
-    <div class="panel-body">
-        <div ng-include="'partials/binding/employee.html'"></div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">wave</div>
-    <div class="panel-body">
-        <div ng-include="'partials/binding/wave.html'"></div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">sort</div>
-    <div class="panel-body">
-        <div ng-include="'partials/binding/sort.html'"></div>
-    </div>
-</div>
+<div class="tab-content container" ng-include="selectedItem.url"></div>
 
 </body>
 </html>
