@@ -1,0 +1,11 @@
+<div ng-controller="IfCtrl">
+    <ul>
+        <li ng-if="condition==1">if 1</li>
+        <li ng-if="condition==2">if 2</li>
+
+        <li ng-show="condition==1">show 1</li>
+        <li ng-show="condition==2">show 2</li>
+    </ul>
+
+    <button ng-click="change()">change</button>
+</div>

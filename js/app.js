@@ -17,6 +17,12 @@ angular.module("tutor").controller("NavCtrl", ["$scope", function($scope) {
         title: "Style",
         url: "partials/binding/style.html"
     }, {
+        title: "If",
+        url: "partials/binding/if.html"
+    }, {
+        title: "Switch",
+        url: "partials/binding/switch.html"
+    }, {
         title: "Region",
         url: "partials/binding/region.html"
     }, {
