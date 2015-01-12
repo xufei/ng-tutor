@@ -16,6 +16,12 @@ angular.module("tutor").controller("ArrayCtrl", ["$scope", function ($scope) {
         age: 2
     }];
 
+    $scope.obj = {
+        a: 1,
+        b: 1,
+        c: 3
+    };
+
     $scope.add = function () {
         $scope.arr1.push($scope.arr1.length + 1);
     };
