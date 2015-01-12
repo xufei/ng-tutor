@@ -3,12 +3,12 @@ angular.module("tutor").controller("WatchCtrl", ["$scope", function ($scope) {
 
     $scope.a = 1;
 
-    $scope.$watch("a", function(newValue) {
-        $scope.log += (newValue) + "\n";
+    $scope.$watch("a", function(newValue, oldValue) {
+        $scope.log += oldValue + " -> " + newValue + "\n";
     });
 
     $scope.changeA = function() {
-        $scope.a = 2;
+        $scope.a++;;
     };
 
     $scope.arr = [0];
