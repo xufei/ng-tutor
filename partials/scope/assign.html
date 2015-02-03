@@ -1,0 +1,23 @@
+<div ng-controller="OuterCtrl">
+    <span>outer a:{{a}}</span>
+    <div ng-controller="InnerCtrl">
+        <span>inner a:{{a}}</span>
+        <button ng-click="a=a+1">inner a++</button>
+    </div>
+</div>
+
+<div ng-controller="OuterCtrl">
+    <span>outer data.a:{{data.a}}</span>
+    <div ng-controller="InnerCtrl">
+        <span>inner data.{{data.a}}</span>
+        <button ng-click="data.a=data.a+1">increase a</button>
+    </div>
+</div>
+
+<div ng-controller="OuterCtrl">
+    <span>outer a:{{a}}</span>
+    <div ng-controller="InnerCtrl">
+        <span>inner a:{{a}}</span>
+        <button ng-click="$parent.a=a+1">outer a++</button>
+    </div>
+</div>

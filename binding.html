@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <script type="text/javascript" src="libs/angular.min.js"></script>
 
-    <!-- build:js({.tmp,app}) scripts/controls.js -->
+    <!-- build:js({.tmp,app}) scripts/binding.js -->
     <script type="text/javascript" src="js/app.js"></script>
 
     <script type="text/javascript" src="js/binding/simple.js"></script>
@@ -23,7 +23,7 @@
     <!-- endbuild -->
 
 </head>
-<body ng-app="tutor" ng-controller="NavCtrl">
+<body ng-app="tutor" ng-controller="BindingCtrl">
 
 <ul class="nav nav-tabs">
     <li ng-repeat="item in items" ng-click="change(item)"

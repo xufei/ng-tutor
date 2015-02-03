@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>angularjs scope</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/event.js -->
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/javascript" src="js/scope/root.js"></script>
+
+    <script type="text/javascript" src="js/scope/extend.js"></script>
+    <script type="text/javascript" src="js/scope/newscope.js"></script>
+    <script type="text/javascript" src="js/scope/alias.js"></script>
+    <script type="text/javascript" src="js/scope/hierarchy.js"></script>
+    <script type="text/javascript" src="js/scope/eventbus.js"></script>
+
+    <script type="text/javascript" src="js/scope/isolate.js"></script>
+    <!-- endbuild -->
+
+</head>
+<body ng-app="tutor">
+
+<div class="col-md-12">
+    <div class="col-md-12">
+        <input ng-model="rootA"/>
+        {{rootA}}
+    </div>
+
+    <div class="col-md-12" ng-controller="RootCtrl">
+        <textarea ng-model="log" class="form-control"></textarea>
+    </div>
+</div>
+
+<div ng-controller="ScopeCtrl">
+<ul class="nav nav-tabs">
+    <li ng-repeat="item in items" ng-click="change(item)"
+        ng-class="{true:'active', false: ''}[item==selectedItem]">
+        <a href="javascript:void(0)">{{item.title}}</a>
+    </li>
+</ul>
+
+<div class="tab-content container" ng-include="selectedItem.url"></div>
+</div>
+</body>
+</html>

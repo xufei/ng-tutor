@@ -1,0 +1,19 @@
+<div ng-controller="NewScopeCtrl">
+    <div>outer: {{sum1}}</div>
+    <ul>
+        <li ng-repeat="item in arr track by $index">
+            {{item}}
+            <button ng-click="sum1=sum1+item">increase</button>
+            <div>inner: {{sum1}}</div>
+        </li>
+    </ul>
+
+    <div>outer: {{sum2}}</div>
+    <ul>
+        <li ng-repeat="item in arr track by $index">
+            {{item}}
+            <button ng-click="$parent.sum2=sum2+item">increase</button>
+            <div>inner: {{sum2}}</div>
+        </li>
+    </ul>
+</div>

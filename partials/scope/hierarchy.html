@@ -1,0 +1,42 @@
+<div class="col-md-12" ng-controller="Level1Ctrl" ng-class="state" ng-init="name='root'">
+    <style>
+        .emit {
+            background-color: aqua;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        .broadcast {
+            background-color: coral;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        .normal {
+            background-color: darkgreen;
+            padding: 10px;
+            border: 2px solid black;
+        }
+    </style>
+
+    <div class="col-md-12">Root</div>
+    <div class="col-md-6" ng-controller="Level2Ctrl" ng-class="state" ng-init="name='A'">
+        <div class="col-md-12">A</div>
+        <div class="col-md-6" ng-controller="Level3Ctrl" ng-class="state" ng-init="name='A1'">
+            A1
+            <button class="btn btn-xs" ng-click="test()">Test</button>
+        </div>
+        <div class="col-md-6" ng-controller="Level3Ctrl" ng-class="state" ng-init="name='A2'">
+            A2
+        </div>
+    </div>
+    <div class="col-md-6" ng-controller="Level2Ctrl" ng-class="state" ng-init="name='B'">
+        <div class="col-md-12">B</div>
+        <div class="col-md-6" ng-controller="Level3Ctrl" ng-class="state" ng-init="name='B1'">
+            B1
+        </div>
+        <div class="col-md-6" ng-controller="Level3Ctrl" ng-class="state" ng-init="name='B2'">
+            B2
+        </div>
+    </div>
+</div>

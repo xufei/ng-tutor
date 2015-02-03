@@ -1,0 +1,16 @@
+<div>
+    <div ng-controller="OuterCtrl">
+        <span>outer a1:{{a}}</span>
+        <div ng-controller="InnerCtrl">
+            <span>inner a1:{{a}}</span>
+        </div>
+    </div>
+
+    <div ng-controller="OuterCtrl">
+        <span>outer a2:{{a}}</span>
+    </div>
+
+    <div ng-controller="InnerCtrl">
+        <span>inner a2:{{a}}</span>
+    </div>
+</div>

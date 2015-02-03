@@ -1,6 +1,6 @@
 angular.module("tutor", []);
 
-angular.module("tutor").controller("NavCtrl", ["$scope", function($scope) {
+angular.module("tutor").controller("BindingCtrl", ["$scope", function($scope) {
     $scope.items = [{
         title: "Simple Binding",
         url: "partials/binding/simple.html"
@@ -34,6 +34,37 @@ angular.module("tutor").controller("NavCtrl", ["$scope", function($scope) {
     }, {
         title: "Sort",
         url: "partials/binding/sort.html"
+    }];
+
+    $scope.selectedItem = $scope.items[0];
+
+    $scope.change = function(item) {
+        $scope.selectedItem = item;
+    };
+}]);
+
+angular.module("tutor").controller("ScopeCtrl", ["$scope", function($scope) {
+    $scope.items = [{
+        title: "extend",
+        url: "partials/scope/extend.html"
+    }, {
+        title: "assign",
+        url: "partials/scope/assign.html"
+    }, {
+        title: "alias",
+        url: "partials/scope/alias.html"
+    }, {
+        title: "new scope",
+        url: "partials/scope/newscope.html"
+    }, {
+        title: "isolate",
+        url: "partials/scope/isolate.html"
+    }, {
+        title: "hierarchy",
+        url: "partials/scope/hierarchy.html"
+    }, {
+        title: "event bus",
+        url: "partials/scope/eventbus.html"
     }];
 
     $scope.selectedItem = $scope.items[0];
