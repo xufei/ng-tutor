@@ -6,7 +6,7 @@
     <button ng-click="addItem()">add item</button>
     <button ng-click="changeArr()">change arr</button>
     <ul>
-        <li ng-repeat="item in arr">{{item}}</li>
+        <li ng-repeat="item in arr track by $index">{{item}}</li>
     </ul>
 
     <textarea ng-model="log" class="form-control"></textarea>
